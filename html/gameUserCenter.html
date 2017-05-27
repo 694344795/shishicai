@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>投注记录</title>
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/bet.css" />
+		<link rel="stylesheet" type="text/css" href="../css/js-ui.css" />
+		<link rel="stylesheet" type="text/css" href="../css/gameUserCenter.css" />
+	</head>
+
+	<body>
+		<div class="gameUserCenter">
+
+			<div id="topbar" class="topbar">
+				<div class="topbar-bg"></div>
+				<div class="g_34"> <span class="firfog" style="display: none;">FF4</span> <span class="domain-validate"><a href="http://www.ph158.info:8080/" target="_blank" id="doaminCheck">域名中心</a></span>
+					<ul class="bar-menu">
+						<li class="user" id="J-user-panel">
+							<a class="icon-user" href="javascript:;" id="headerUsername">您好，simon123</a>
+						</li>
+						<li class="balance">
+							<div class="balance-box">
+								<span id="hiddenBall" style="display: inline;">余额:
+								<a href="#" id="showAllBall">00元</a></span>
+							</div>
+						</li>
+						<li class="recharge">
+							<a href="#" id="headerRecharge">充值</a>
+						</li>
+						<li class="withdrawals">
+							<a href="#" id="headerWithdraw">提现</a>
+						</li>
+						<li class="chargeAppeal">
+							<a href="#" id="appealRecharge">催到账</a>
+						</li>
+						<li class="help">
+							<a href="#" id="headerHelp">帮助</a>
+						</li>
+						<li class="client-service" id="J-client-service">
+							<a href="#" id="onlineChat">在线客服</a>
+						</li>
+						<li class="client-qa active-message">
+							<a class="support_service_link" href="#">留言解答<span id="answer_message">●</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="header" class="header">
+				<div style="height:10px"></div>
+				<div class="g_33" id="ffrog">
+					<!--<a href="http://www.ph158nb.com:666/index" title="首页" class="logo"></a>-->
+					<ul class="main-menu">
+						<li id="J-btn-lottery">
+							<a class="link-sub" href="#" id="headerLottery">彩票</a>
+							<div class="lottery-link"> <i class="tri"></i>
+								<div class="lottery-type">
+									<h3 class="type-title">时时彩</h3>
+									<div class="type-list two-line">
+										<ul>
+											<li>
+												<a href="#">重庆时时彩</a><span class="icon-hot"></span></li>
+											<li>
+												<a href="#">黑龙江时时彩</a>
+											</li>
+											<li>
+												<a href="#">上海时时乐</a>
+											</li>
+											<li>
+												<a href="#">天津时时彩</a>
+											</li>
+											<li>
+												<a href="#">顺利秒秒彩</a><span class="icon-new"></span></li>
+										</ul>
+										<ul>
+											<li>
+												<a href="#">新疆时时彩</a>
+											</li>
+											<li>
+												<a href="#">乐利时时彩</a>
+											</li>
+											<li>
+												<a href="#">吉利分分彩</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="lottery-type">
+									<h3 class="type-title">11选5</h3>
+									<div class="type-list">
+										<ul>
+											<li>
+												<a href="#">山东11选5</a>
+											</li>
+											<li>
+												<a href="#">江西11选5</a>
+											</li>
+											<li>
+												<a href="#">广东11选5</a>
+											</li>
+											<li>
+												<a href="#">乐利11选5</a>
+											</li>
+											<li>
+												<a href="#">顺利11选5</a><span class="icon-new"></span></li>
+										</ul>
+									</div>
+								</div>
+								<div class="lottery-type">
+									<h3 class="type-title">快乐彩</h3>
+									<div class="type-list">
+										<ul>
+											<li>
+												<a href="#">北京快乐8</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="lottery-type">
+									<h3 class="type-title">快三</h3>
+									<div class="type-list">
+										<ul>
+											<li>
+												<a href="#">江苏快三</a>
+											</li>
+											<li>
+												<a href="#">安徽快三</a>
+											</li>
+											<li>
+												<a href="#">江苏骰宝</a>
+											</li>
+											<li>
+												<a href="#">吉利骰宝</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="lottery-type">
+									<h3 class="type-title">低频</h3>
+									<div class="type-list">
+										<ul>
+											<li>
+												<a href="#">3D</a>
+											</li>
+											<li>
+												<a href="#">排列3/5</a>
+											</li>
+											<li>
+												<a href="#">双色球</a>
+											</li>
+											<li>
+												<a href="#">六合彩</a><span class="icon-new"></span></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#" id="headerTigerGame">老虎机</a>
+						</li>
+						<li>
+							<a href="#">凤凰游艺</a>
+						</li>
+						<li>
+							<a href="#" id="interfaceAction">平台活动</a>
+						</li>
+						<li id="J-btn-download">
+							<a class="link-sub" href="javascript:;" id="downloadCenter">下载中心</a>
+							<div class="app-download"> <i class="tri"></i>
+								<div class="download-btn">
+									<div class="download-app">
+										<a href="#" target="_blank" id="mobileAPPdownload">手机版下载</a>
+									</div>
+									<div class="download-safe">
+										<a href="#" id="DCSafecenter">安全中心</a>
+									</div>
+									<div class="download-fhx">
+										<a href="#">客户端下载</a>
+									</div>
+									<div class="download-exe">
+										<a href="#" id="PTClientcenter">PT客户端下载</a>
+									</div>
+									<div class="download-login">
+										<a href="#" id="expressLogin">快速登录器</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<a href="#" class="J_entry" id="201704surveyEnter" style="display: none; position: absolute; margin: 0px;"></a>
+			</div>
+			<div class="g_33 common-main">
+
+				<div class="g_5">
+					<div class="common-side">
+						<div class="nav-side">
+							<dl class="side-bet">
+								<dt class="title">投注管理</dt>
+								<dd>
+									<a href="#">投注记录</a>
+								</dd>
+								<dd>
+									<a href="#">追号记录</a>
+								</dd>
+								<dd>
+									<a href="#">账户明细</a>
+								</dd>
+							</dl>
+							<dl class="side-safe">
+								<dt class="title">账户安全</dt>
+								<dd>
+									<a href="#">安全中心</a>
+								</dd>
+								<dd>
+									<a href="#">银行卡管理</a>
+								</dd>
+								<dd>
+									<a href="#">个人资料</a>
+								</dd>
+								<dd>
+									<a href="#">密码管理</a>
+								</dd>
+								<dd>
+									<a href="#">奖金详情</a>
+								</dd>
+							</dl>
+							<dl class="side-service">
+								<dt class="title">服务</dt>
+								<dd>
+									<a href="#" style="text-decoration:none;">站内信&nbsp;<span class="side-message-num" id="radiuscount">&nbsp;&nbsp;<span id="noreadmsg">0</span>&nbsp;&nbsp;</span>
+									</a>
+								</dd>
+								<dd>
+									<a href="#">通知设置</a>
+								</dd>
+								<dd>
+									<a href="#">催到账<span class="side-message-num" style="display: none;margin-left:3px">&nbsp;&nbsp;<span id="fundAppealNoticeCount">0</span>&nbsp;&nbsp;</span>
+									</a>
+								</dd>
+							</dl>
+
+							<dl class="side-proxy">
+
+								<dt class="title">代理中心</dt>
+
+								<dd>
+									<a href="#">代理首页</a>
+								</dd>
+								<dd>
+									<a href="#">开户中心</a>
+								</dd>
+								<dd>
+									<a href="#">客户管理</a>
+								</dd>
+
+								<dd>
+									<a href="#">报表查询</a>
+								</dd>
+
+							</dl>
+
+							<dl class="side-funds">
+								<dt class="title">资金</dt>
+								<dd>
+									<a href="#">我要充值</a>
+								</dd>
+								<dd>
+									<a href="#">我要提现</a>
+								</dd>
+								<dd>
+									<a href="#">我要转账</a>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+
+				<div class="g_28 g_last">
+					<div class="common-article">
+						<div class="title">投注记录</div>
+						<div class="content">
+							<div class="ui-tab-title tab-title-bg clearfix">
+								<ul>
+									<li class="current">彩票</li>
+
+									<li>
+										<a href="#">凤凰游艺</a>
+									</li>
+								</ul>
+							</div>
+
+							<table class="table table-info">
+								<thead>
+									<tr>
+										<th>方案编号</th>
+										<th>彩种/玩法</th>
+										<th>期号</th>
+										<th>投注金额</th>
+										<th style="width: 80px;">开奖号码</th>
+										<th>状态</th>
+										<th>是否追号</th>
+										<th>投单时间</th>
+										<th>操作项</th>
+									</tr>
+								</thead>
+								<tbody>
+
+									<tr>
+										<td>DCQC1705250735ig</td>
+										<td>
+
+											<a title="一星_复式" href="#" style="text-decoration:underline;">重庆时时彩</a>
+
+										</td>
+										<td>20170525-073</td>
+										<td><span class="price"><dfn>¥</dfn>1.00</span></td>
+										<td style="word-break:break-all; word-wrap:break-word;">
+											46661
+										</td>
+										<td>未中奖
+										</td>
+
+										<td> 否</td>
+										<td>2017-05-25 18:07:12</td>
+										<td>
+											<a href="http://em.ph158nb.com:666/gameUserCenter/queryOrderDetail?orderId=235062701" target="_black">查看</a>
+										</td>
+									</tr>
+
+									<tr>
+										<td>DCQC1705250725ij</td>
+										<td>
+
+											<a title="一星_复式" href="#" style="text-decoration:underline;">重庆时时彩</a>
+
+										</td>
+										<td>20170525-072</td>
+										<td><span class="price"><dfn>¥</dfn>2.00</span></td>
+										<td style="word-break:break-all; word-wrap:break-word;">
+											92870
+										</td>
+										<td>
+
+											<span class="price color-red"><dfn>¥</dfn>3.60</span>
+										</td>
+
+										<td> 否</td>
+										<td>2017-05-25 17:57:12</td>
+										<td>
+											<a href="http://em.ph158nb.com:666/gameUserCenter/queryOrderDetail?orderId=235059350" target="_black">查看</a>
+										</td>
+									</tr>
+
+									<tr>
+										<td>DCQC1705250715i7</td>
+										<td>
+
+											<a title="一星_复式" href="#" style="text-decoration:underline;">重庆时时彩</a>
+
+										</td>
+										<td>20170525-071</td>
+										<td><span class="price"><dfn>¥</dfn>1.00</span></td>
+										<td style="word-break:break-all; word-wrap:break-word;">
+											89827
+										</td>
+										<td>未中奖
+										</td>
+
+										<td> 否</td>
+										<td>2017-05-25 17:47:18</td>
+										<td>
+											<a href="http://em.ph158nb.com:666/gameUserCenter/queryOrderDetail?orderId=235056598" target="_black">查看</a>
+										</td>
+									</tr>
+
+									<tr>
+										<td>DCQC1705250705nk</td>
+										<td>
+
+											<a title="一星_复式" href="#" style="text-decoration:underline;">重庆时时彩</a>
+
+										</td>
+										<td>20170525-070</td>
+										<td><span class="price"><dfn>¥</dfn>1.00</span></td>
+										<td style="word-break:break-all; word-wrap:break-word;">
+											69142
+										</td>
+										<td>
+
+											<span class="price color-red"><dfn>¥</dfn>1.80</span>
+										</td>
+
+										<td> 否</td>
+										<td>2017-05-25 17:37:11</td>
+										<td>
+											<a href="http://em.ph158nb.com:666/gameUserCenter/queryOrderDetail?orderId=235053560" target="_black">查看</a>
+										</td>
+									</tr>
+
+									<tr>
+										<td>DCQC1705250695iP</td>
+										<td>
+
+											<a title="一星_复式" href="#" style="text-decoration:underline;">重庆时时彩</a>
+
+										</td>
+										<td>20170525-069</td>
+										<td><span class="price"><dfn>¥</dfn>1.00</span></td>
+										<td style="word-break:break-all; word-wrap:break-word;">
+											20402
+										</td>
+										<td>
+
+											<span class="price color-red"><dfn>¥</dfn>1.80</span>
+										</td>
+
+										<td> 否</td>
+										<td>2017-05-25 17:27:43</td>
+										<td>
+											<a href="http://em.ph158nb.com:666/gameUserCenter/queryOrderDetail?orderId=235050763" target="_black">查看</a>
+										</td>
+									</tr>
+
+									<tr>
+										<td>DCQC1705250685iT</td>
+										<td>
+
+											<a title="一星_复式" href="#" style="text-decoration:underline;">重庆时时彩</a>
+
+										</td>
+										<td>20170525-068</td>
+										<td><span class="price"><dfn>¥</dfn>1.00</span></td>
+										<td style="word-break:break-all; word-wrap:break-word;">
+											60414
+										</td>
+										<td>
+
+											<span class="price color-red"><dfn>¥</dfn>1.80</span>
+										</td>
+
+										<td> 否</td>
+										<td>2017-05-25 17:17:13</td>
+										<td>
+											<a href="http://em.ph158nb.com:666/gameUserCenter/queryOrderDetail?orderId=235047810" target="_black">查看</a>
+										</td>
+									</tr>
+
+									<tr>
+										<td>DCQC1705250385iV</td>
+										<td>
+
+											<a title="一星_复式" href="#" style="text-decoration:underline;">重庆时时彩</a>
+
+										</td>
+										<td>20170525-038</td>
+										<td><span class="price"><dfn>¥</dfn>2.00</span></td>
+										<td style="word-break:break-all; word-wrap:break-word;">
+											52903
+										</td>
+										<td>未中奖
+										</td>
+
+										<td> 否</td>
+										<td>2017-05-25 12:17:12</td>
+										<td>
+											<a href="http://em.ph158nb.com:666/gameUserCenter/queryOrderDetail?orderId=234945358" target="_black">查看</a>
+										</td>
+									</tr>
+
+									<tr>
+										<td>DCQC1705250375io</td>
+										<td>
+
+											<a title="一星_复式" href="#" style="text-decoration:underline;">重庆时时彩</a>
+
+										</td>
+										<td>20170525-037</td>
+										<td><span class="price"><dfn>¥</dfn>1.00</span></td>
+										<td style="word-break:break-all; word-wrap:break-word;">
+											33857
+										</td>
+										<td>未中奖
+										</td>
+
+										<td> 否</td>
+										<td>2017-05-25 12:07:28</td>
+										<td>
+											<a href="http://em.ph158nb.com:666/gameUserCenter/queryOrderDetail?orderId=234941746" target="_black">查看</a>
+										</td>
+									</tr>
+
+									<tr>
+										<td>DCQC1705250365ic</td>
+										<td>
+
+											<a title="一星_复式" href="#" style="text-decoration:underline;">重庆时时彩</a>
+
+										</td>
+										<td>20170525-036</td>
+										<td><span class="price"><dfn>¥</dfn>1.00</span></td>
+										<td style="word-break:break-all; word-wrap:break-word;">
+											45396
+										</td>
+										<td>
+
+											<span class="price color-red"><dfn>¥</dfn>1.80</span>
+										</td>
+
+										<td> 否</td>
+										<td>2017-05-25 11:57:12</td>
+										<td>
+											<a href="http://em.ph158nb.com:666/gameUserCenter/queryOrderDetail?orderId=234938784" target="_black">查看</a>
+										</td>
+									</tr>
+
+									<tr>
+										<td>DCQC1705250355iV</td>
+										<td>
+
+											<a title="一星_复式" href="#" style="text-decoration:underline;">重庆时时彩</a>
+
+										</td>
+										<td>20170525-035</td>
+										<td><span class="price"><dfn>¥</dfn>1.00</span></td>
+										<td style="word-break:break-all; word-wrap:break-word;">
+											83806
+										</td>
+										<td>
+
+											<span class="price color-red"><dfn>¥</dfn>1.80</span>
+										</td>
+
+										<td> 否</td>
+										<td>2017-05-25 11:47:11</td>
+										<td>
+											<a href="http://em.ph158nb.com:666/gameUserCenter/queryOrderDetail?orderId=234935330" target="_black">查看</a>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+
+							<div class="page-wrapper">
+								<span class="page-text"> <span class="lower">共334条记录</span>
+								</span>
+
+								<div class="page page-right">
+
+									<a href="#" onclick="doCurrent(1)" class="current">1</a>
+
+									<a href="#" onclick="doCurrent(2)">2</a>
+
+									<a href="#" onclick="doCurrent(3)">3</a>
+
+									<a href="#" onclick="doCurrent(4)">4</a>
+
+									<a href="#" onclick="doCurrent(5)">5</a>
+
+									<a href="#" onclick="doCurrent(6)">6</a>
+
+									<a href="#" onclick="doCurrent(7)">7</a>
+
+									<a href="#" onclick="doCurrent(8)">8</a>
+
+									<a href="#" onclick="doCurrent(9)">9</a>
+
+									<a href="#" onclick="doCurrent(10)">10</a>
+
+									<a href="javascript:void(0)" onclick="doForward(11)">.1.</a>
+
+									<a href="#" onclick="doNext()" class="next">下一步</a>
+
+									<span class="page-few">到第 <input id="forwardPage" type="text" value="" class="input"> /34页
+							</span> <input type="button" value="确 认" class="page-btn" onclick="javascript:;">
+								</div>
+							</div>
+
+							<!-- end  -->
+
+						</div>
+
+					</div>
+					<dl class="fund-info-supplement">
+						<dt>说明：低频投注记录保留50天，其他彩种投注记录保留7天。</dt>
+					</dl>
+				</div>
+
+			</div>
+		</div>
+	</body>
+
+</html>

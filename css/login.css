@@ -1,0 +1,250 @@
+.login_box{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url(../img/bg-header.jpg);
+}
+.login_box .login_content{
+	position: relative;
+    width: 900px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+.login_box .login_content .nav-wrap{
+	position: relative;
+}
+.login_box .login_content .nav-wrap .logo{
+	width: 210px;
+    height: 40px;
+    margin-bottom: 15px;
+    background-position: 0 0;
+    background-image: url(../img/un-login.png);
+    background-repeat: no-repeat;
+}
+.login_box .login_content .nav-wrap .guest-point {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 210px;
+    height: 29px;
+    margin: 0;
+    padding: 0 0 0 29px;
+    overflow: hidden;
+    line-height: 29px;
+    font-size: 14px;
+    border-radius: 20px;
+    background-color: #FFF;
+    background-position: 5px -95px;
+        background-image: url(../img/un-login.png);
+    background-repeat: no-repeat;
+}
+.login_box .login_content .nav-wrap .guest-area a {
+    color: #555;
+    text-decoration: underline;
+    transition: color .3s;
+}
+.login_box .login_content .info-panel {
+    height: 370px;
+    margin: 0px auto;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+}
+.login_box .login_content .info-panel .login-info-area {
+    position: relative;
+    width: 280px;
+    height: 315px;
+    padding: 20px 30px;
+    background: #FDFDFD;
+    border-radius: 10px 0 0 10px;
+    padding-top: 35px;
+}
+.login_box .login_content .login-info-area .quick-login {
+    position: absolute;
+    background: url(../img/icon-rocket.png) no-repeat left center;
+    padding-left: 14px;
+    top: 12px;
+    height: 20px;
+    line-height: 20px;
+    right: 30px;
+        color: #009B7D;
+    text-decoration: none;
+}
+.login_box .login_content .login-info-area .user-info {
+    position: relative;
+    margin-top: 10px;
+    border: 1px solid #e2e2e2;
+    overflow: hidden;
+    border-radius: 3px;
+}
+.login_box .login_content .user-info .user-ver, .user-info .user-password, .user-info .user-name{
+    width: 190px;
+    height: 35px;
+    margin: 0 10px;
+    padding: 7px 30px 7px 40px;
+    line-height: 35px;
+    border: none;
+    background-color: #FDFDFD;
+    outline: none;
+    font-size: 16px;
+	background-position: 8px -122px;    
+	background-image: url(../img/un-login.png);
+    background-repeat: no-repeat;
+}
+.login_box .login_content .user-info .user-password {
+    border-top: 1px solid #E2E2E2;
+    background-position: 8px -222px;
+}
+.login_box .login_content .user-info .forget-password {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 3px 5px;
+    border: 1px solid #CCC;
+    background-color: #FFF;
+    color: #CCC;
+    text-decoration: none;
+    border-radius: 2px;
+    -webkit-transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -o-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+.choose-game {
+    margin-top: 10px;
+    text-align: center;
+}
+.choose-game .label {
+    margin: 0 20px;
+    font-size: 14px;
+}
+.radio {
+    vertical-align: middle;
+    margin-right: 3px;
+}
+.lottery-span, .game-span {
+    width: 50px;
+    height: 16px;
+    display: inline-block;
+    background: url(../img/un-login.png);
+    background-repeat: no-repeat;
+    background-position: 0px -320px;
+    vertical-align: middle;
+}
+.game-span {
+    width: 63px;
+    background-position: -93px -320px;
+}
+.submit-btn {
+    width: 100%;
+    height: 45px;
+    margin-top: 15px;
+    border: none;
+    font-size: 20px;
+    color: #FFF;
+    outline: none;
+    cursor: pointer;
+    background-image: -webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.2));
+    background-image: -moz-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.2));
+    background-image: -o-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.2));
+    background-image: linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,.2));
+    background-color: #21AC9D;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px rgba(0,0,0,.2);
+}
+.login-tips {
+    position: absolute;
+    bottom: 15px;
+    left: 6px;
+    width: 280px;
+    font-size: 14px;
+    text-align: center;
+    color: #0a786c;
+}
+.login-tips .link {
+    display: inline-block;
+    margin: 0 5px 0 5px;
+    padding: 1px 3px;
+    border-radius: 2px;
+    text-decoration: none;
+    border: 1px solid #0a786c;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.info-panel .banner-area {
+    width: 500px;
+    height: 310px;
+    padding: 30px;
+}
+.cycle-slideshow {
+    position: relative;
+    width: 500px;
+    height: 310px;
+    overflow: hidden;
+    /*background: url(../common/ico-loading.gif) no-repeat scroll center center;*/
+}
+.cycle-slide {
+    width: 500px;
+    height: 288px;
+    overflow: hidden;
+}
+.suggest-browser {
+    margin-top: 80px;
+    color: #fff;
+    text-align: center;
+}
+.suggest-browser .chrome {
+    background-position: 0 -50px;
+}
+.suggest-browser .firefox {
+    background-position: -80px -50px;
+}
+.suggest-browser .ie {
+    background-position: -40px -50px;
+}
+.suggest-browser a {
+    display: inline-block;
+    width: 32px;
+    height: 40px;
+    margin: 0 0 0 15px;
+    background-image: url(../img/un-login.png);
+    background-repeat: no-repeat;
+}
+.browser-desc {
+    margin: 5px 0;
+    color: #8eb0aa;
+    text-align: center;
+}
+.login_btn{
+	display: block;
+}
+.login-info-area .msg-show {
+	display: none;
+    width: 282px;
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 10px;
+    color: #ff0000;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

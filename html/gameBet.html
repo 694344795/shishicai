@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>投注</title>
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/bet.css" />
+		<link rel="stylesheet" type="text/css" href="../css/js-ui.css" />
+		<link rel="stylesheet" type="text/css" href="../css/gameBet.css" />
+		<link rel="stylesheet" type="text/css" href="../css/gameUserCenter.css" />
+		<script src="../js/lib/jquery-1.11.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/lib/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/agGame.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/gameBet.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="gameBet" ng-app="agGame">
+			<div id="topbar" class="topbar">
+				<div class="topbar-bg"></div>
+				<div class="g_34"> <span class="firfog" style="display: none;">FF4</span> <span class="domain-validate"><a href="http://www.ph158.info:8080/" target="_blank" id="doaminCheck">域名中心</a></span>
+					<ul class="bar-menu">
+						<li class="user" id="J-user-panel">
+							<a class="icon-user" href="javascript:;" id="headerUsername">您好，simon123</a>
+						</li>
+						<li class="balance">
+							<div class="balance-box">
+								<span id="hiddenBall" style="display: inline;">余额:
+								<a href="#" id="showAllBall">00元</a></span>
+							</div>
+						</li>
+						<li class="recharge">
+							<a href="#" id="headerRecharge">充值</a>
+						</li>
+						<li class="withdrawals">
+							<a href="#" id="headerWithdraw">提现</a>
+						</li>
+						<li class="chargeAppeal">
+							<a href="#" id="appealRecharge">催到账</a>
+						</li>
+						<li class="help">
+							<a href="#" id="headerHelp">帮助</a>
+						</li>
+						<li class="client-service" id="J-client-service">
+							<a href="#" id="onlineChat">在线客服</a>
+						</li>
+						<li class="client-qa active-message">
+							<a class="support_service_link" href="#">留言解答<span id="answer_message">●</span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="header">
+				<div class="g_33">
+					<h1 class="logo">
+				<!--<a title="时时彩" id="J-lottery-logo" style="background: url(../img/logo-cqss.png) 0px 0px no-repeat scroll rgba(0, 0, 0, 0);">时时彩</a>-->
+					此处放logo
+					</h1>
+					<div class="deadline">
+						<div class="deadline-text">
+							第<strong id="J-lottery-info-number">20170525-086</strong>期<br>离投注截止还有
+						</div>
+						<div class="deadline-number">
+							<em class="min-left" style="display: inline;">0</em>
+							<em class="min-right" style="display: inline;">0</em>
+							<span style="display: inline;">:</span>
+							<em class="sec-left" style="display: inline;">2</em>
+							<em class="sec-right" style="display: inline;">2</em>
+							<strong style="display:none">预售中</strong>
+						</div>
+					</div>
+					<div class="lottery">
+						<div class="lottery-text">
+							第<strong id="J-lottery-info-lastnumber">20170525-085</strong>期<br>
+							<a href="#" target="_blank">开奖号码&gt;</a>
+						</div>
+						<div class="lottery-number" id="J-lottery-info-balls">
+							<em class="gold">2</em> <em class="gold">7</em> <em>1</em> <em>5</em> <em>3</em>
+						</div>
+						<div class="lottery-link">
+							<a href="#" target="_blank" class="chart">号码走势</a>
+							<a href="#" target="_blank" class="info">游戏说明</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="g_33 main" ng-controller="gameController">
+				<div class="play-section">
+					<div class="program-chase">
+						<ul class="program-chase-title">
+							<li class="current">我的方案</li>
+							<li>我的追号</li>
+						</ul>
+						<ul class="program-chase-content">
+							<li class="current">
+
+								<table class="program-chase-table" id="program-user-orders">
+
+									<thead>
+										<tr>
+											<th>期号</th>
+											<th>投注金额</th>
+											<th>状态</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>
+												<a target="_black" href="/gameUserCenter/queryOrderDetail?orderId=235062701"> 20170525-073</a>
+											</td>
+											<td><span class="price"><dfn>¥</dfn>1.00</span></td>
+											<td>未中奖</td>
+										</tr>
+										<tr>
+											<td>
+												<a target="_black" href="/gameUserCenter/queryOrderDetail?orderId=235059350"> 20170525-072</a>
+											</td>
+											<td><span class="price"><dfn>¥</dfn>2.00</span></td>
+											<td>中<span class="price color-red"><dfn>¥</dfn>3.60</span></td>
+										</tr>
+										<tr>
+											<td>
+												<a target="_black" href="/gameUserCenter/queryOrderDetail?orderId=235056598"> 20170525-071</a>
+											</td>
+											<td><span class="price"><dfn>¥</dfn>1.00</span></td>
+											<td>未中奖</td>
+										</tr>
+										<tr>
+											<td>
+												<a target="_black" href="/gameUserCenter/queryOrderDetail?orderId=235053560"> 20170525-070</a>
+											</td>
+											<td><span class="price"><dfn>¥</dfn>1.00</span></td>
+											<td>中<span class="price color-red"><dfn>¥</dfn>1.80</span></td>
+										</tr>
+									</tbody>
+
+								</table>
+								<table class="program-chase-table">
+									<tbody>
+										<tr>
+											<td colspan="3" class="text-right">
+												<a href="gameUserCenter.html" target="_blank" class="more">更多»</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</li>
+							<li>
+								<table class="program-chase-table" id="program-user-plans">
+									<thead>
+										<tr>
+											<th>起始期号</th>
+											<th>已追/总</th>
+											<th>总金额</th>
+											<th>状态</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td colspan="5">您最近7天暂时没有追号记录！</td>
+
+										</tr>
+									</tbody>
+								</table>
+								<table class="program-chase-table">
+									<tbody>
+										<tr>
+											<td colspan="3" class="text-right">
+												<a class="more" href="#" target="_blank">更多»</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</li>
+						</ul>
+					</div>
+					<div id="J-play-select" class="play-select">
+						<div id="change">
+							<ul class="play-select-title clearfix">
+								<li class="choose-label">普通玩法:</li>
+								<li data-diamond="" class="wuxing">五星</li>
+								<li data-diamond="" class="sixing">四星</li>
+								<li data-diamond="" class="qiansan">前三</li>
+								<li data-diamond="" class="zhongsan">中三</li>
+								<li data-diamond="" class="housan ">后三</li>
+								<li data-diamond="" class="qianer">前二</li>
+								<li data-diamond="" class="houer">后二</li>
+								<li data-diamond="" class="yixing current">一星</li>
+							</ul>
+							<ul class="play-select-content clearfix">
+								<li class="yixing current">
+									<dl class="dingweidan"><dt>定位胆：</dt>
+										<dd data-type="yixing.dingweidan.fushi" class="fushi current">复式</dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+						<div class="prompt">
+							<i class="icon-question"></i> <span class="method-tip">从万位、千位、百位、十位、个位任意位置上至少选择1个号码，选号与相同位置上的开奖号码一致，即中"18"元</span>
+							<a class="example-button" href="javascript:void(0);">选号示例</a>
+							<!--<div class="example-tip">投注：**456<br>开奖：**456<br>奖金："1800"元</div>-->
+						</div>
+					</div>
+				</div>
+				<!-- 选球统计开始 -->
+				<div class="number-section">
+					<div id="J-balls-main-panel">
+						<div style="display: block;">
+							<div class="number-select-content">
+								<ul class="ball-section">
+									<li>
+										<div class="ball-title"><strong>万位</strong><span>当前遗漏</span></div>
+										<ul class="ball-content">
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">0</a><span class="ball-aid">0</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">1</a><span class="ball-aid">2</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">2</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">3</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">4</a><span class="ball-aid">3</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">5</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">6</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">7</a><span class="ball-aid">1</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">8</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">9</a><span class="ball-aid ball-aid-hot">4</span></li>
+										</ul>
+										<div class="ball-control">
+											<a href="javascript:void(0);">全</a>
+											<a href="javascript:void(0);">大</a>
+											<a href="javascript:void(0);">小</a>
+											<a href="javascript:void(0);">奇</a>
+											<a href="javascript:void(0);">偶</a>
+											<a href="javascript:void(0);">清</a>
+										</div>
+									</li>
+									<li>
+										<div class="ball-title"><strong>千位</strong><span>当前遗漏</span></div>
+										<ul class="ball-content">
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">0</a><span class="ball-aid">2</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">1</a><span class="ball-aid">1</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">2</a><span class="ball-aid">3</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">3</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">4</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">5</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">6</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">7</a><span class="ball-aid">0</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">8</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">9</a><span class="ball-aid ball-aid-hot">4</span></li>
+										</ul>
+										<div class="ball-control">
+											<a href="javascript:void(0);">全</a>
+											<a href="javascript:void(0);">大</a>
+											<a href="javascript:void(0);">小</a>
+											<a href="javascript:void(0);">奇</a>
+											<a href="javascript:void(0);">偶</a>
+											<a href="javascript:void(0);">清</a>
+										</div>
+									</li>
+									<li>
+										<div class="ball-title"><strong>百位</strong><span>当前遗漏</span></div>
+										<ul class="ball-content">
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">0</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">1</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">2</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">3</a><span class="ball-aid">1</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">4</a><span class="ball-aid">0</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">5</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">6</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">7</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">8</a><span class="ball-aid">2</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">9</a><span class="ball-aid">3</span></li>
+										</ul>
+										<div class="ball-control">
+											<a href="javascript:void(0);">全</a>
+											<a href="javascript:void(0);">大</a>
+											<a href="javascript:void(0);">小</a>
+											<a href="javascript:void(0);">奇</a>
+											<a href="javascript:void(0);">偶</a>
+											<a href="javascript:void(0);">清</a>
+										</div>
+									</li>
+									<li>
+										<div class="ball-title"><strong>十位</strong><span>当前遗漏</span></div>
+										<ul class="ball-content">
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">0</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">1</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">2</a><span class="ball-aid">3</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">3</a><span class="ball-aid">0</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">4</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">5</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">6</a><span class="ball-aid">2</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">7</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">8</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">9</a><span class="ball-aid ball-aid-hot">4</span></li>
+										</ul>
+										<div class="ball-control">
+											<a href="javascript:void(0);">全</a>
+											<a href="javascript:void(0);">大</a>
+											<a href="javascript:void(0);">小</a>
+											<a href="javascript:void(0);">奇</a>
+											<a href="javascript:void(0);">偶</a>
+											<a href="javascript:void(0);">清</a>
+										</div>
+									</li>
+									<li>
+										<div class="ball-title"><strong>个位</strong><span>当前遗漏</span></div>
+										<ul class="ball-content">
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">0</a><span class="ball-aid">1</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">1</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">2</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">3</a><span class="ball-aid">2</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">4</a><span class="ball-aid">0</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">5</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">6</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">7</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">8</a><span class="ball-aid ball-aid-hot">4</span></li>
+											<li>
+												<a href="javascript:void(0);" class=" ball-number ">9</a><span class="ball-aid ball-aid-hot">4</span></li>
+										</ul>
+										<div class="ball-control">
+											<a href="javascript:void(0);">全</a>
+											<a href="javascript:void(0);">大</a>
+											<a href="javascript:void(0);">小</a>
+											<a href="javascript:void(0);">奇</a>
+											<a href="javascript:void(0);">偶</a>
+											<a href="javascript:void(0);">清</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="J-balls-statistics-panel">
+						<ul class="bet-statistics">
+							<li class="choose-bet">你选择了<em id="J-balls-statistics-lotteryNum" class="choose_bet_num">0</em>注，
+							</li>
+							<!--
+					<li class="choose-multiple">
+						<div class="choose-list" style="display:none;">
+							<a href="javascript:void(0);">1倍</a>
+							<a href="javascript:void(0);">5倍</a>
+							<a href="javascript:void(0);">10倍</a>
+							<a href="javascript:void(0);">15倍</a>
+						</div>
+						<input type="text" value="8000" class="input" /><i></i><span class="text">倍，</span>
+					</li>
+					-->
+							<li class="choose-multiple">
+
+								<div class="choose-model ui-simulation-select">
+									<span class="info"><input data-realvalue="1" class="choose-input" type="text" value="1"></span><i></i></div>
+								<select id="J-balls-statistics-multiple" class="J-ui-select" style="display: none;">
+									<option value="1" selected="selected">1</option>
+									<option value="5">5</option>
+									<option value="10">10</option>
+									<option value="15">15</option>
+								</select> 倍 &nbsp;&nbsp;
+							</li>
+							<li class="choose-moneyunit">
+								<div class="choose-model ui-simulation-select game_money_list">
+									<div class="choose-list" style="display: none;">
+										<a data-value="1" href="javascript:void(0);">元</a>
+										<a data-value="0.1" href="javascript:void(0);">角</a>
+									</div><span class="info"><input data-realvalue="0.1" class="choose-input" disabled="disabled" type="text" value="角"></span><i></i></div>
+								<select id="J-balls-statistics-moneyUnit" class="J-ui-select" style="display: none;">
+									<option value="1" selected="selected">元</option>
+									<option value="0.1">角</option>
+								</select>
+							</li>
+
+							<li class="total-money">共<strong class="price" id="J-balls-statistics-amount">0.00</strong>元
+							</li>
+						</ul>
+						<div class="choose-btn">
+							<input type="button" value="" id="J-add-order" class="sel_add" ng-click="selAdd()">
+						</div>
+					</div>
+				</div>
+				<!-- 选球统计结束 -->
+
+				<div class="panel-section">
+					<div class="clearfix">
+						<div class="panel-select">
+							<ul id="J-balls-order-container">
+								<!--这里是选中-->
+							</ul>
+						</div>
+						<div class="panel-btn">
+							<a href="javascript:void(0);" id="randomone" class="take-one"><i></i>机选一注</a>
+							<a href="javascript:void(0);" id="randomfive" class="take-five"><i></i>机选五注</a>
+							<a href="javascript:void(0);" id="restdata" class="empty-number"><i></i>清空号码</a>
+						</div>
+					</div>
+					<ul class="bet-statistics">
+						<li>方案注数 <em id="J-gameOrder-lotterys-num" ng-bind="allPour">0</em> 注，
+						</li>
+						<li>金额<strong class="price"> <dfn>¥</dfn> <span id="J-gameOrder-amount" ng-bind="nextSum">0.00</span>
+			</strong>元
+						</li>
+					</ul>
+
+				</div>
+
+				<!-- 提交按钮开始 -->
+				<div class="bet-btn">
+					<input type="button" id="J-submit-order" value="">
+				</div>
+				<!-- 提交按钮结束 -->
+			</div>
+			<div class="j-ui-miniwindow pop w-9" style="z-index: 700; position: fixed; display: none; left: 50%; top: 50%;transform: translate(-236px,-76px);">
+				<div class="hd"><i class="close closeBtn"></i><span class="title">温馨提示</span></div>
+				<div class="bd">
+					<div class="bd text-center">
+						<div class="pop-waring"><i class="ico-waring <#=icon-class#>"></i>
+							<h4 class="pop-text"><span class="color-red">&nbsp;号码选择不完整，请重新选择！</span><br></h4></div>
+					</div>
+				</div>
+				<a style="display: none;" href="javascript:void(0);" class="btn confirm">确 认<b class="btn-inner"></b></a>
+				<a style="display: none;" href="javascript:void(0);" class="btn cancel">取 消<b class="btn-inner"></b></a>
+				<a href="javascript:void(0);" style="" class="btn closeTip">关 闭<b class="btn-inner"></b></a>
+			</div>
+			<div class="j-ui-mask" style="position: fixed; left: 0px; top: 0px;bottom: 0;right: 0; opacity: 0.2; background-color: rgb(51, 51, 51); z-index: 600; display: none;"></div>
+		</div>
+	</body>
+
+</html>

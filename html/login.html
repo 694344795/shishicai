@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/login.css" />
+		<script src="../js/lib/jquery-1.11.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/login.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="login_box">
+			<div class="login_content">
+				<div class="nav-wrap clearfix">
+					<div class="logo"></div>
+					<div class="guest-point guest-area">
+						<span class="help-icon">有问题咨询在线客服？</span>
+						<a id="custom-service" href="javascript:void(0);">点击此处</a>
+					</div>
+				</div>
+				<div class="info-panel clearfix">
+					<div class="login-info-area" style="float: left;">
+						<a href="#" class="quick-login" target="_blank">如何快速登录</a>
+						<form action="#" method="post">
+							<div class="user-info clearfix">
+								<input type="text" id="J-user-name" name="user-name" class="user-name" placeholder="用户名">
+								<input type="password" id="J-user-password" name="user-password" placeholder="密码" class="user-password">
+								<a href="#" class="forget-password" tabindex="-1" id="forgetPW">忘记密码？</a>
+							</div>
+							<div id="J-msg-show" data-display="show" class="msg-show" style="height: 20px;"> 密码不能为空</div>
+							<div class="choose-game">
+								<label for="choose-lottery" class="label"><input type="radio" id="choose-lottery" class="radio" name="choose-game" value="1" checked="checked"><span class="lottery-span"></span></label>
+								<label for="choose-pt" class="label"><input type="radio" id="choose-pt" class="radio" name="choose-game" value="2"><span class="game-span"></span></label>
+							</div>
+							<a href="javascript:;" class="login_btn"><input id="J-form-submit" class="submit-btn" type="button" value="登 录"></a>
+							<div class="login-tips">验证平台真伪，请使用
+								<a id="aSafeLogin" class="link" href="#">安全登录</a>
+							</div>
+						</form>
+					</div>
+					<div class="banner-area" style="float: left;">
+						<div id="focus" class="cycle-slideshow">
+							<div class="item cycle-slide cycle-slide-active" style="visibility: visible; position: absolute; top: 0px; left: 0px; z-index: 99; opacity: 1; display: block;">
+								<a target="_blank" href="#"><img src="../img/login_banner.jpg" alt=""></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="suggest-browser">
+					<a href="http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html" class="chrome" target="_blank"></a>
+					<a href="https://www.mozilla.org/zh-CN/firefox/new" class="firefox" target="_blank"></a>
+					<a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" class="ie" target="_blank"></a>
+				</div>
+				<p class="browser-desc">为了更好的操作体验首选Google Chrome、Firefox 或 IE9 浏览器，点击可立即下载。</p>
+			</div>
+		</div>
+	</body>
+
+</html>
